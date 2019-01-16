@@ -1,6 +1,7 @@
 package com.franklee.com.controller;
 
 import com.franklee.com.entity.Test;
+import com.franklee.com.entity.User;
 import com.franklee.com.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,11 @@ public class TestController {
 
     @RequestMapping(value = "/singleDateSourse", method = RequestMethod.GET)
     public List<Test> singleDateSourse() {
-        return testService.singleDateSourse();
+        return testService.singleDateSourse();//agent库
+    }
+
+    @RequestMapping(value = "/secondDBDate",method = RequestMethod.GET)
+    public List<User> secondDBDate(){
+        return testService.secondDBDate();//ubuntu库
     }
 }

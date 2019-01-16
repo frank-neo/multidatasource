@@ -10,6 +10,5 @@ import java.util.List;
 public interface TestMapper {
 
     @Select("Select id,fr,vbng from test")
-    List<Test> singleDateSourse();
-
+    List<Test> singleDateSourse();//agent库
 }
