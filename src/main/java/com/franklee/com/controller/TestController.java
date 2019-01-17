@@ -21,8 +21,21 @@ public class TestController {
         return testService.singleDateSourse();//agent库
     }
 
-    @RequestMapping(value = "/secondDBDate",method = RequestMethod.GET)
-    public List<User> secondDBDate(){
+    @RequestMapping(value = "/secondDBDate", method = RequestMethod.GET)
+    public List<User> secondDBDate() {
         return testService.secondDBDate();//ubuntu库
+    }
+
+    /**
+     * 动态数据源查询
+     */
+    @RequestMapping(value = "/DyDate1", method = RequestMethod.GET)
+    public List<User> DynamicDBDate1() {
+        return testService.DynamicDBDate1();
+    }
+
+    @RequestMapping(value = "/DyDate2", method = RequestMethod.GET)
+    public List<User> DynamicDBDate2() {
+        return testService.DynamicDBDate2();
     }
 }
