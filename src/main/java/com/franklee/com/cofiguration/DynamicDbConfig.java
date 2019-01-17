@@ -11,6 +11,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * 接下来需要配置mybatis的SqlSessionFactory使用的数据源：
+ */
 @Configuration
 @MapperScan(basePackages = {"com.franklee.com.mapperdynamic"}, sqlSessionFactoryRef = "sqlSessionFactoryDY")
 public class DynamicDbConfig {
